@@ -1,0 +1,104 @@
+.confirmation{
+   
+    
+    background-color: White;
+    width: 40vw;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    border: 1px solid black;
+    &-head{
+        font-size: 2rem;
+        margin-top: 1rem;
+        font-weight: 700;
+    }
+    &-content{
+        text-align: center;
+        margin-top: 1rem;
+        color: var(--Darkgray);
+    }
+    &-action{
+        margin-top: 2rem;
+        button{
+            background-color: var(--Moderatecyan);
+            border-radius: 100px;
+            padding: 1rem 2rem;
+            border: none;
+            color: white;
+            font-weight: 700;
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                top: 50%;
+                bottom: 50%;
+                left: 50%;
+                right: 50%;
+                border: 2px solid var(--White);
+                border-radius: 100px;
+                transition: all 0.5s;
+                border-bottom: 0px;
+                border-top: 0px;
+            }
+            &:hover{
+                cursor: pointer;
+                position: relative;
+                transition: all 0.5s;
+                background-color: var(--Darkcyan);
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: -10px;
+                    bottom: -10px;
+                    left: 10px;
+                    right: 10px;
+                    border: 1px solid var(--White);
+                    border-radius: 100px;
+                    border-bottom: 0px;
+                    border-top: 0px;
+                }
+            }
+        }
+    }
+    position: absolute;
+    top: 5%;
+    left: 30vw;
+    right: 0%;
+    transform:scale(0) translateX(-100%);
+    
+    animation: openMenu 0.5s 1  forwards;
+}
+.hideConfirm{
+    animation: closeMenu 0.5s 1  forwards;
+}
+@media only screen and (max-width: 800px) {
+    .confirmation{
+        width: 95vw;
+        left: 2.5vw;
+        &-head{
+            font-size: 1rem;
+            margin-top: 1rem;
+            font-weight: 700;
+        }
+        &-content{
+            width: 80vw;
+            text-align: center;
+            margin-top: 0.5rem;
+            color: var(--Darkgray);
+        }
+        &-action{
+            margin-top: 1rem;
+            button{
+                background-color: var(--Moderatecyan);
+                border-radius: 100px;
+                padding: 0.5rem 1rem;
+                border: none;
+                color: white;
+                font-weight: 700;
+            }
+        }
+    }
+}

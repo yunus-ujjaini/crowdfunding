@@ -1,0 +1,19 @@
+@import 'reset';
+@import 'fonts';
+@import 'style';
+@import 'header';
+@import 'nav';
+@import 'card-main';
+@import 'card2';
+@import 'card3';
+@import 'confirmation';
+@import 'preloader';
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Commissioner', sans-serif;
+    background-color: rgb(243, 243, 243);
+    position: relative;
+}

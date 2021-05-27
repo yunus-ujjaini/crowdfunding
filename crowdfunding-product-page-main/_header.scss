@@ -1,0 +1,18 @@
+header{
+    width: 100vw;
+    height: 50vh;
+    background: url("images/image-hero-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 3vw;
+    box-shadow: inset 0vw 8vw 40vw 0vw var(--Black) ;
+    position: relative;
+}
+@media only screen and (max-width: 800px) {
+    header{
+        padding: 5vw;
+        background: url("images/image-hero-mobile.jpg");
+    }
+    
+}
